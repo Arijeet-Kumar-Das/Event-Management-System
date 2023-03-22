@@ -297,7 +297,7 @@ const Home = () => {
           sx={{
             backgroundColor: "red",
             margin: "auto",
-            height: "3  px",
+            height: "3px",
             width: "100px",
           }}
         ></Box>

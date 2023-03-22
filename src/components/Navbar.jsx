@@ -91,7 +91,12 @@ const Navbar = () => {
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Vendors</Typography>
+                <Link
+                  to="/vendors"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <Typography textAlign="center">Vendors</Typography>
+                </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">Venues</Typography>
@@ -134,12 +139,17 @@ const Navbar = () => {
                 Home
               </Button>
             </Link>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "black", display: "block" }}
+            <Link
+              to="/vendors"
+              style={{ textDecoration: "none", color: "black" }}
             >
-              Vendors
-            </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                Vendors
+              </Button>
+            </Link>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "black", display: "block" }}

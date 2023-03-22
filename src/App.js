@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Vendors from "./pages/Vendors";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
+        <Route path="/vendors" element={<Vendors />} />
       </Routes>
     </div>
   );
