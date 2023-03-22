@@ -5,6 +5,7 @@ import { CssBaseline } from "@mui/material";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Vendors from "./pages/Vendors";
+import UserInterest from "./pages/UserInterest";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
         <Route path="/vendors" element={<Vendors />} />
+        <Route path="/userinterest" element={<UserInterest />} />
       </Routes>
     </div>
   );

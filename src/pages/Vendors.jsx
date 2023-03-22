@@ -31,7 +31,15 @@ const Vendors = () => {
   return (
     <div style={{ padding: "20px" }}>
       <Typography variant="h6">Event Categories</Typography>
-      <Grid container spacing={3} sx={{ marginTop: "20px" }}>
+      <Box
+        sx={{
+          backgroundColor: "red",
+
+          height: "3px",
+          width: "100px",
+        }}
+      ></Box>
+      <Grid container spacing={3} sx={{ marginTop: "10px" }}>
         <Grid item md={6} xs={12}>
           <Paper
             elevation={1}
