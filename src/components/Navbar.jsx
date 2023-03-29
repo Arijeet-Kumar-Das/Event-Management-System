@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
-import Logo from "../Images/LOGO.jpg";
+import Logo from "../Images/LOGO.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -53,7 +53,7 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <img src={Logo} alt="" height="40px" width="100px" />
+            <img src={Logo} alt="" height="22px" width="150px" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -123,7 +123,7 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <img src={Logo} alt="" height="40px" width="100px" />
+            <img src={Logo} alt="" height="25px" width="170px" />
           </Typography>
           <Box
             sx={{

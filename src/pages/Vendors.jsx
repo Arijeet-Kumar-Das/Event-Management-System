@@ -117,7 +117,7 @@ const Vendors = () => {
                 id="basic-menu"
                 anchorEl={anchorEl}
                 open={open}
-                onClose={handleClose2}
+                onClose={handleClose}
                 MenuListProps={{
                   "aria-labelledby": "basic-button",
                 }}
