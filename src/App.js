@@ -8,6 +8,7 @@ import Vendors from "./pages/Vendors";
 import UserInterest from "./pages/UserInterest";
 
 import Ticket from "./pages/Ticket";
+import Pass from "./components/Pass";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/userinterest" element={<UserInterest />} />
 
         <Route path="/ticket" element={<Ticket />} />
+        <Route path="/pass" element={<Pass />} />
       </Routes>
     </div>
   );
