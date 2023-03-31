@@ -9,6 +9,8 @@ import UserInterest from "./pages/UserInterest";
 
 import Ticket from "./pages/Ticket";
 import Pass from "./components/Pass";
+import Vendordashboard from "./pages/Vendordashboard";
+import UserDashboard from "./pages/UserDashboard";
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
         <Route path="/register" element={<SignUp />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/userinterest" element={<UserInterest />} />
-
+        <Route path="/vendordashboard" element={<Vendordashboard />} />
+        <Route path="/userdashboard" element={<UserDashboard />} />
         <Route path="/ticket" element={<Ticket />} />
         <Route path="/pass" element={<Pass />} />
       </Routes>

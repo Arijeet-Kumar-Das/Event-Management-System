@@ -1,4 +1,4 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import Circle1 from "../Images/circle1.png";
 import Circle2 from "../Images/circle2.png";
@@ -8,60 +8,65 @@ const Pass = () => {
   return (
     <div>
       <Box
-        height="87vh"
+        display="flex"
+        justifyContent="space-around"
+        alignItems="center"
+        margin="20px"
+      >
+        <Typography variant="h5">Download Your Pass</Typography>
+        <Button variant="contained" color="error">
+          DOWNLOAD
+        </Button>
+      </Box>
+      <Box
+        height="70vh"
         display="flex"
         justifyContent="center"
         alignItems="center"
+        p={2}
       >
         <Paper
-          elevation={5}
           sx={{
             display: "flex",
-            justifyContent: "space-between",
-            width: "620px",
-            height: "280px",
+            alignItems: "center",
+            flexDirection: { xs: "column", md: "row" },
+            gap: 10,
+            marginTop: "50px",
+            padding: "20px 20px",
+            maxWidth: "600px",
+            p: { xs: 5, md: 3 },
           }}
         >
-          <img src={SingerImg} alt="" width="40%" height="100%" />
-          <Box p={3} width="60%" display="flex" flexDirection="column" gap={1}>
+          <img
+            src={SingerImg}
+            alt=""
+            width="200px"
+            height="200px"
+            style={{ borderRadius: "50%" }}
+          />
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="flex-start"
+            flexDirection="column"
+          >
             <Box
               display="flex"
-              justifyContent="flex-start"
+              justifyContent="center"
               alignItems="center"
-              gap={3}
+              gap={2}
             >
-              <img src={Circle1} alt="" width="25px" height="25px" />
-              <img src={Circle2} alt="" width="25px" height="25px" />
-              <img src={Circle3} alt="" width="25px" height="25px" />
+              <img src={Circle1} alt="" width="30px" height="30px" />
+              <img src={Circle2} alt="" width="30px" height="30px" />
+              <img src={Circle3} alt="" width="30px" height="30px" />
             </Box>
-            <Typography
-              variant="h6"
-              sx={{ fontFamily: "Nunito", color: "red" }}
-            >
-              BOHAGI
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{ fontFamily: "Nunito", color: "red" }}
-            >
-              BIHU EVENT IN IITG
-            </Typography>
-
-            <Typography variant="p" sx={{ fontFamily: "Nunito" }}>
-              Singer: Achurjya Borpatra
-            </Typography>
-            <Typography
-              variant="h4"
-              sx={{ fontFamily: "Nunito", fontWeight: "bold" }}
-            >
-              08.04.2023
-            </Typography>
-            <Typography variant="p" sx={{ fontFamily: "Nunito" }}>
-              Time: 11:00 am onwards
-            </Typography>
-            <Typography variant="p" sx={{ fontFamily: "Nunito" }}>
-              Pass: Free
-            </Typography>
+            <Typography variant="h6">BOHAGI</Typography>
+            <Typography variant="h6">BIHU EVENT IN IITG</Typography>
+            <Typography variant="p">Singer: Achurjya Borpatra</Typography>
+            <Typography variant="p">08.04.2023</Typography>
+            <Typography variant="p">Time: 11:00 am onwards</Typography>
+            <Typography variant="p">Pass: Free</Typography>
+            <Typography variant="p">IITG003</Typography>
           </Box>
         </Paper>
       </Box>
