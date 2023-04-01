@@ -30,6 +30,7 @@ import Rating from "@mui/material/Rating";
 import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import PublicIcon from "@mui/icons-material/Public";
 import KitesurfingIcon from "@mui/icons-material/Kitesurfing";
+import Footer from "../components/Footer";
 const Home = () => {
   const PaperStyle = {
     display: "flex",
@@ -283,7 +284,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box marginTop="100px" backgroundColor="#e3dddd" padding="20px 50px">
+      <Box marginTop="100px" backgroundColor="#ECEFF5" padding="20px 50px">
         <Typography
           variant="h5"
           sx={{
@@ -579,6 +580,57 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
+      {/* Newsletter  */}
+      <Box
+        display="flex"
+        justifyContent="space-evenly"
+        alignItems="center"
+        marginTop="20px"
+        backgroundColor="#ECEFF5"
+        height="200px"
+        sx={{ flexDirection: { xs: "column", md: "row" } }}
+      >
+        <Box display="flex" flexDirection="column">
+          <Typography variant="p">SUBSCRIBE</Typography>
+          <Typography variant="h5" sx={{ color: "red" }}>
+            Sign Up our Newsletter
+          </Typography>
+        </Box>
+        <Box
+          display="flex"
+          sx={{
+            flexDirection: { xs: "column", md: "row" },
+            gap: { xs: 2, md: 0 },
+          }}
+        >
+          <TextField
+            sx={{ background: "white" }}
+            variant="outlined"
+            placeholder="Enter your Email"
+            InputProps={{
+              disableUnderline: true,
+              style: {
+                height: "40px",
+                maxWidth: "500px",
+                borderRadius: "0",
+              },
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+          <Button
+            variant="contained"
+            color="error"
+            sx={{ borderRadius: "0px" }}
+          >
+            SUBSCRIBE
+          </Button>
+        </Box>
+      </Box>
+      <Footer />
     </div>
   );
 };

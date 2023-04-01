@@ -11,6 +11,10 @@ import Ticket from "./pages/Ticket";
 import Pass from "./components/Pass";
 import Vendordashboard from "./pages/Vendordashboard";
 import UserDashboard from "./pages/UserDashboard";
+import Venues from "./pages/Venues";
+import Venue from "./pages/Venue";
+import VendorsPage from "./pages/VendorsPage";
+import Vendor from "./pages/Vendor";
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
         <Route path="/userdashboard" element={<UserDashboard />} />
         <Route path="/ticket" element={<Ticket />} />
         <Route path="/pass" element={<Pass />} />
+        <Route path="/venues" element={<Venues />} />
+        <Route path="/venue" element={<Venue />} />
+        <Route path="/categorised-vendors" element={<VendorsPage />} />
+        <Route path="/vendor" element={<Vendor />} />
       </Routes>
     </div>
   );
