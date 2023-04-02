@@ -54,7 +54,6 @@ const Vendordashboard = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            // alignItems: "center",
             width: { xs: "100%", md: "20%" },
             minHeight: { xs: "200px", md: "88vh" },
             overflowY: "auto",
