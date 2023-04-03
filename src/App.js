@@ -8,13 +8,14 @@ import Vendors from "./pages/Vendors";
 import UserInterest from "./pages/UserInterest";
 
 import Ticket from "./pages/Ticket";
-import Pass from "./components/Pass";
+
 import Vendordashboard from "./pages/Vendordashboard";
 import UserDashboard from "./pages/UserDashboard";
 import Venues from "./pages/Venues";
 import Venue from "./pages/Venue";
 import VendorsPage from "./pages/VendorsPage";
 import Vendor from "./pages/Vendor";
+import Pass from "./components/Pass";
 
 function App() {
   return (
