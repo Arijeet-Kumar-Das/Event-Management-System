@@ -13,8 +13,7 @@ import {
 import StarRateIcon from "@mui/icons-material/StarRate";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+
 import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PhotoIcon from "@mui/icons-material/Photo";
@@ -23,10 +22,59 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import ImageList from "@mui/material/ImageList";
 import EmailIcon from "@mui/icons-material/Email";
 import ImageListItem from "@mui/material/ImageListItem";
+import { useTheme } from "@mui/material/styles";
+import MobileStepper from "@mui/material/MobileStepper";
 
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
 import VenueForm from "../components/VenueForm";
 
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
 const Venue = () => {
+  // Image Slider
+  const images = [
+    {
+      label: "San Francisco – Oakland Bay Bridge, United States",
+      imgPath:
+        "https://images.unsplash.com/photo-1676508952268-2b84e239859e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    },
+    {
+      label: "Bird",
+      imgPath:
+        "https://images.unsplash.com/photo-1676487918369-0e3b85e5240b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    },
+    {
+      label: "Bali, Indonesia",
+      imgPath:
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    },
+    {
+      label: "Goč, Serbia",
+      imgPath:
+        "https://images.unsplash.com/photo-1661712963074-a1b421de9a5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80",
+    },
+  ];
+
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
+
+  // albums
   const itemData = [
     {
       img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
@@ -85,21 +133,106 @@ const Venue = () => {
         gap={3}
         sx={{ flexDirection: { xs: "column", md: "row" } }}
       >
-        <Box display="flex" flexDirection="column">
-          <img
-            src={VenueImage}
-            alt=""
-            style={{ maxWidth: "800px", maxHeight: "400px" }}
+        <Box sx={{ maxWidth: 600, flexGrow: 1 }}>
+          <AutoPlaySwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+          >
+            {images.map((step, index) => (
+              <div key={step.label}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    component="img"
+                    sx={{
+                      height: 430,
+                      display: "block",
+                      maxWidth: 600,
+                      overflow: "hidden",
+                      width: "100%",
+                    }}
+                    src={step.imgPath}
+                    alt={step.label}
+                  />
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+          <MobileStepper
+            steps={maxSteps}
+            position="static"
+            activeStep={activeStep}
+            nextButton={
+              <Button
+                size="small"
+                onClick={handleNext}
+                disabled={activeStep === maxSteps - 1}
+              >
+                Next
+                {theme.direction === "rtl" ? (
+                  <KeyboardArrowLeft />
+                ) : (
+                  <KeyboardArrowRight />
+                )}
+              </Button>
+            }
+            backButton={
+              <Button
+                size="small"
+                onClick={handleBack}
+                disabled={activeStep === 0}
+              >
+                {theme.direction === "rtl" ? (
+                  <KeyboardArrowRight />
+                ) : (
+                  <KeyboardArrowLeft />
+                )}
+                Back
+              </Button>
+            }
           />
-          <Paper sx={{ borderRadius: "0px", p: 2 }}>
-            <BottomNavigation showLabels>
-              <BottomNavigationAction
-                label="Like"
-                icon={<FavoriteBorderIcon />}
-              />
-              <BottomNavigationAction label="Albums" icon={<PhotoIcon />} />
-              <BottomNavigationAction label="Reviews" icon={<ModeIcon />} />
-            </BottomNavigation>
+
+          <Paper
+            sx={{
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <IconButton>
+                <FavoriteBorderIcon sx={{ fontSize: "large" }} />
+              </IconButton>
+              <Typography variant="p">Like</Typography>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <IconButton>
+                <PhotoIcon sx={{ fontSize: "large" }} />
+              </IconButton>
+              <Typography variant="p">Albums</Typography>
+            </Box>
+            <Box
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <IconButton>
+                <ModeIcon sx={{ fontSize: "large" }} />
+              </IconButton>
+              <Typography variant="p">Reviews</Typography>
+            </Box>
           </Paper>
         </Box>
         <Box

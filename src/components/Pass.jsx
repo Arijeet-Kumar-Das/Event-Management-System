@@ -11,6 +11,7 @@ import GplusLogo from "../Images/Gplus Logo-01.png";
 import Logo from "../Images/LOGO.png";
 import Jaapi from "../Images/jaapi-image.jpg";
 import { Height } from "@mui/icons-material";
+import Pragnews from "../Images/PRAG NEWS LOGO.png";
 const Pass = () => {
   return (
     <div>
@@ -127,13 +128,23 @@ const Pass = () => {
             </Box>
           </Box>
           <Divider />
-          <Box display="flex" alignItems="center" gap={2}>
+
+
+          <Box display="flex" alignItems="center" gap={1}>
+            <Box display="flex" flexDirection="column">
+              <Typography
+                variant="p"
+                sx={{ fontSize: "5px", textAlign: "center" }}
+              >
+                EXCLUSIVE MEDIA PARTNER
+              </Typography>
+              <img src={Pragnews} alt="" width="75px" height="30px" />
+            </Box>
             <Box
               display="flex"
               flexDirection="column"
               justifyContent="center"
               alignitems="center"
-              marginLeft="5.5rem"
             >
               <Typography
                 variant="p"
@@ -159,6 +170,9 @@ const Pass = () => {
               <img src={GplusLogo} alt="" width="75px" height="30px" />
             </Box>
           </Box>
+
+
+          
           <Typography variant="p">Date: 08.04.2023</Typography>
           <Typography variant="p">Time: 11 am onwards</Typography>
           <Typography variant="p">Pass: free</Typography>

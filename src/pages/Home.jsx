@@ -65,10 +65,11 @@ const Home = () => {
               color: "white",
               textAlign: "center",
               fontSize: { xs: "30px", md: "50px" },
+              fontWeight: "550",
               marginTop: "30px",
             }}
           >
-            Connecting the World
+            Let's Boom Together
           </Typography>
           <Typography variant="h6" sx={{ color: "white" }}>
             Plan Your Next Event

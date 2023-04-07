@@ -17,6 +17,7 @@ import GplusLogo from "../Images/Gplus Logo-01.png";
 import Aristalogo from "../Images/aristalogo file.png";
 import NielitLogo from "../Images/NielitLogo.jpg";
 import Logo from "../Images/LOGO.png";
+import PragNews from "../Images/PRAG NEWS LOGO.png";
 
 const Ticket = () => {
   return (
@@ -158,7 +159,25 @@ const Ticket = () => {
           >
             Featured Artist
           </Typography>
-          <Box display="flex" marginLeft="5.5rem">
+          <Box display="flex" marginLeft="5.5rem" gap={2}>
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+            >
+              <Typography variant="p" sx={{ fontSize: "5px" }}>
+                Exclusive Media Partner
+              </Typography>
+              <Box
+                sx={{
+                  height: { xs: "20px", md: "40px" },
+                  width: { xs: "50px", md: "100px" },
+                }}
+              >
+                <img src={PragNews} alt="" width="100%" height="100%" />
+              </Box>
+            </Box>
             <Box
               display="flex"
               flexDirection="column"
@@ -185,6 +204,7 @@ const Ticket = () => {
                 BORPATRA
               </Typography>
             </Box>
+
             <Box
               display="flex"
               flexDirection="column"
@@ -197,7 +217,14 @@ const Ticket = () => {
               >
                 IN ASSOCIATION WITH
               </Typography>
-              <img src={GplusLogo} alt="" width="50px" height="20px" />
+              <Box
+                sx={{
+                  height: { xs: "20px", md: "40px" },
+                  width: { xs: "50px", md: "100px" },
+                }}
+              >
+                <img src={GplusLogo} alt="" width="100%" height="100%" />
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -235,8 +262,8 @@ const Ticket = () => {
             <img
               src={Logo}
               alt=""
-              width="200px"
-              height="50px"
+              width="150px"
+              height="40px"
               style={{ padding: "10px", backgroundColor: "white" }}
             />
           </Box>
