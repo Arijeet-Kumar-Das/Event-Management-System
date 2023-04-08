@@ -16,6 +16,7 @@ import Venue from "./pages/Venue";
 import VendorsPage from "./pages/VendorsPage";
 import Vendor from "./pages/Vendor";
 import Pass from "./components/Pass";
+import BookingForm from "./pages/BookingForm";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/venue" element={<Venue />} />
         <Route path="/categorised-vendors" element={<VendorsPage />} />
         <Route path="/vendor" element={<Vendor />} />
+        <Route path="/booking-form" element={<BookingForm />} />
       </Routes>
     </div>
   );

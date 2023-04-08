@@ -1,4 +1,4 @@
-import { Box, Paper, TextField, Typography } from "@mui/material";
+import { Box, Button, Paper, TextField, Typography } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -85,6 +85,9 @@ const AddServices = () => {
               fullWidth
             />
           </Box>
+          <Button variant="contained" color="error" fullWidth>
+            Submit
+          </Button>
         </Paper>
       </Box>
     </div>
