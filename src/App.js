@@ -17,6 +17,8 @@ import VendorsPage from "./pages/VendorsPage";
 import Vendor from "./pages/Vendor";
 import Pass from "./components/Pass";
 import BookingForm from "./pages/BookingForm";
+import Robot from "./pages/Robot";
+import Wheels from "./pages/Wheels";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
         <Route path="/categorised-vendors" element={<VendorsPage />} />
         <Route path="/vendor" element={<Vendor />} />
         <Route path="/booking-form" element={<BookingForm />} />
+        <Route path="/robot" element={<Robot />} />
+        <Route path="/wheels" element={<Wheels />} />
       </Routes>
     </div>
   );

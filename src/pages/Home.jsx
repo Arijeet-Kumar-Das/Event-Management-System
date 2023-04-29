@@ -1,6 +1,8 @@
 import {
+  Avatar,
   Box,
   Button,
+  Divider,
   IconButton,
   InputAdornment,
   Paper,
@@ -31,6 +33,14 @@ import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import PublicIcon from "@mui/icons-material/Public";
 import KitesurfingIcon from "@mui/icons-material/Kitesurfing";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
+import team1 from "../Images/team-member-1.jpeg";
+import team2 from "../Images/team-member-2.jpeg";
+import team3 from "../Images/team-member-3.jpeg";
+import team4 from "../Images/team-member-4.jpg";
+import robotImg from "../Images/robot.png";
+import wheelsImg from "../Images/wheels.png";
+import { Link } from "react-router-dom";
 const Home = () => {
   const PaperStyle = {
     display: "flex",
@@ -217,72 +227,120 @@ const Home = () => {
           spacing={3}
           sx={{ marginTop: "20px", padding: "0px 50px" }}
         >
+          {/* Update */}
+
           <Grid item xs={12} sm={6} md={2}>
-            <Paper elevation={3} sx={PaperStyle}>
-              <IconButton sx={{ color: "red" }}>
-                <ApartmentIcon sx={{ height: "70px", width: "70px" }} />
-              </IconButton>
-              <Typography variant="p">Buisness</Typography>
-              <Typography variant="p" sx={{ color: "gray" }}>
-                2 events
-              </Typography>
-            </Paper>
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Paper elevation={3} sx={PaperStyle}>
+                <IconButton sx={{ color: "red" }}>
+                  <ApartmentIcon sx={{ height: "70px", width: "70px" }} />
+                </IconButton>
+                <Typography variant="p">Buisness</Typography>
+                <Typography variant="p" sx={{ color: "gray" }}>
+                  2 events
+                </Typography>
+              </Paper>
+            </motion.div>
           </Grid>
           <Grid item xs={12} sm={6} md={2}>
-            <Paper elevation={3} sx={PaperStyle}>
-              <IconButton sx={{ color: "red" }}>
-                <MusicNoteIcon sx={{ height: "70px", width: "70px" }} />
-              </IconButton>
-              <Typography variant="p">Music</Typography>
-              <Typography variant="p" sx={{ color: "gray" }}>
-                1 events
-              </Typography>
-            </Paper>
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Paper elevation={3} sx={PaperStyle}>
+                <IconButton sx={{ color: "red" }}>
+                  <MusicNoteIcon sx={{ height: "70px", width: "70px" }} />
+                </IconButton>
+                <Typography variant="p">Music</Typography>
+                <Typography variant="p" sx={{ color: "gray" }}>
+                  1 events
+                </Typography>
+              </Paper>
+            </motion.div>
           </Grid>
           <Grid item xs={12} sm={6} md={2}>
-            <Paper elevation={3} sx={PaperStyle}>
-              <IconButton sx={{ color: "red" }}>
-                <FastfoodIcon sx={{ height: "70px", width: "70px" }} />
-              </IconButton>
-              <Typography variant="p">Food and Drink</Typography>
-              <Typography variant="p" sx={{ color: "gray" }}>
-                3 events
-              </Typography>
-            </Paper>
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Paper elevation={3} sx={PaperStyle}>
+                <IconButton sx={{ color: "red" }}>
+                  <FastfoodIcon sx={{ height: "70px", width: "70px" }} />
+                </IconButton>
+                <Typography variant="p">Food and Drink</Typography>
+                <Typography variant="p" sx={{ color: "gray" }}>
+                  3 events
+                </Typography>
+              </Paper>
+            </motion.div>
           </Grid>
           <Grid item xs={12} sm={6} md={2}>
-            <Paper elevation={3} sx={PaperStyle}>
-              <IconButton sx={{ color: "red" }}>
-                <FestivalIcon sx={{ height: "70px", width: "70px" }} />
-              </IconButton>
-              <Typography variant="p">Festival</Typography>
-              <Typography variant="p" sx={{ color: "gray" }}>
-                3 events
-              </Typography>
-            </Paper>
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Paper elevation={3} sx={PaperStyle}>
+                <IconButton sx={{ color: "red" }}>
+                  <FestivalIcon sx={{ height: "70px", width: "70px" }} />
+                </IconButton>
+                <Typography variant="p">Festival</Typography>
+                <Typography variant="p" sx={{ color: "gray" }}>
+                  3 events
+                </Typography>
+              </Paper>
+            </motion.div>
           </Grid>
           <Grid item xs={12} sm={6} md={2}>
-            <Paper elevation={3} sx={PaperStyle}>
-              <IconButton sx={{ color: "red" }}>
-                <SportsBasketballIcon sx={{ height: "70px", width: "70px" }} />
-              </IconButton>
-              <Typography variant="p">Sports</Typography>
-              <Typography variant="p" sx={{ color: "gray" }}>
-                3 events
-              </Typography>
-            </Paper>
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Paper elevation={3} sx={PaperStyle}>
+                <IconButton sx={{ color: "red" }}>
+                  <SportsBasketballIcon
+                    sx={{ height: "70px", width: "70px" }}
+                  />
+                </IconButton>
+                <Typography variant="p">Sports</Typography>
+                <Typography variant="p" sx={{ color: "gray" }}>
+                  3 events
+                </Typography>
+              </Paper>
+            </motion.div>
           </Grid>
           <Grid item xs={12} sm={6} md={2}>
-            <Paper elevation={3} sx={PaperStyle}>
-              <IconButton sx={{ color: "red" }}>
-                <VideocamIcon sx={{ height: "70px", width: "70px" }} />
-              </IconButton>
-              <Typography variant="p">Conference</Typography>
-              <Typography variant="p" sx={{ color: "gray" }}>
-                3 events
-              </Typography>
-            </Paper>
+            <motion.div
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.5 },
+              }}
+            >
+              <Paper elevation={3} sx={PaperStyle}>
+                <IconButton sx={{ color: "red" }}>
+                  <VideocamIcon sx={{ height: "70px", width: "70px" }} />
+                </IconButton>
+                <Typography variant="p">Conference</Typography>
+                <Typography variant="p" sx={{ color: "gray" }}>
+                  3 events
+                </Typography>
+              </Paper>
+            </motion.div>
           </Grid>
+
+          {/* To here */}
         </Grid>
       </Box>
       <Box marginTop="100px" backgroundColor="#ECEFF5" padding="20px 50px">
@@ -579,6 +637,222 @@ const Home = () => {
               in youe account
             </Typography>
           </Box>
+        </Box>
+      </Box>
+
+      {/* Out team */}
+      <Box
+        backgroundColor="#ECEFF5"
+        sx={{
+          p: "30px 0px",
+          height: "400px",
+          display: "flex",
+
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+      >
+        <Box>
+          <Typography
+            variant="h5"
+            sx={{
+              textAlign: "center",
+              fontSize: "2rem",
+            }}
+          >
+            Our Team
+          </Typography>
+          <Box
+            sx={{
+              backgroundColor: "red",
+              margin: "auto",
+              height: "3px",
+              width: "100px",
+            }}
+          ></Box>
+        </Box>
+        <Box marginTop="20px" padding={5}>
+          <Grid container spacing={3}>
+            <Grid item xs={6} sm={4} md={3}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Avatar sx={{ width: "100px", height: "100px" }} src={team1} />
+                <Typography
+                  variant="h6"
+                  sx={{ textAlign: "center", fontWeight: "bold" }}
+                >
+                  Irani Borah
+                </Typography>
+                <Typography variant="p" sx={{ textAlign: "center" }}>
+                  Director and CEO
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Avatar sx={{ width: "100px", height: "100px" }} src={team2} />
+                <Typography
+                  variant="h6"
+                  sx={{ textAlign: "center", fontWeight: "bold" }}
+                >
+                  Saurav Sarma
+                </Typography>
+                <Typography variant="p" sx={{ textAlign: "center" }}>
+                  Buisness Development Manager
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Avatar sx={{ width: "100px", height: "100px" }} src={team3} />
+                <Typography
+                  variant="h6"
+                  sx={{ textAlign: "center", fontWeight: "bold" }}
+                >
+                  Vikash Chandra Mishra
+                </Typography>
+                <Typography variant="p" sx={{ textAlign: "center" }}>
+                  Lead Backend Developer
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={6} sm={4} md={3}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Avatar sx={{ width: "100px", height: "100px" }} src={team4} />
+                <Typography
+                  variant="h6"
+                  sx={{ textAlign: "center", fontWeight: "bold" }}
+                >
+                  Arijeet Kumar Das
+                </Typography>
+                <Typography variant="p" sx={{ textAlign: "center" }}>
+                  Lead Frontend Developer
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+
+      {/* Robot Theme */}
+      <Typography
+        variant="h5"
+        sx={{
+          textAlign: "center",
+          fontSize: "2rem",
+          marginTop: "20px",
+        }}
+      >
+        Coming Soon!
+      </Typography>
+      <Box
+        sx={{
+          backgroundColor: "red",
+          margin: "auto",
+          height: "3px",
+          width: "100px",
+        }}
+      ></Box>
+      <Box
+        display="flex"
+        sx={{ flexDirection: { xs: "column", md: "row" } }}
+        justifyContent="space-around"
+        alignItems="center"
+        marginTop="50px"
+      >
+        <Box
+          display="flex"
+          justifyContent="center"
+          sx={{ alignItems: { xs: "center", md: "start" } }}
+          flexDirection="column"
+          width="50%"
+          gap={4}
+        >
+          <Typography
+            variant="h5"
+            sx={{ color: "red", textAlign: { xs: "center", md: "start" } }}
+          >
+            Experience the Future with our 'Robot Themed Events'
+          </Typography>
+          <Typography
+            variant="p"
+            sx={{ textAlign: { xs: "center", md: "start" } }}
+          >
+            Immerse yourself in a futuristic world filled with robots,
+            technology, and interactive experiences at our Robot Themed Events.
+            With a range of activities and attractions, it's an event not to be
+            missed!
+          </Typography>
+          <Link to="/robot">
+            <Button variant="contained" color="error">
+              Know More
+            </Button>
+          </Link>
+        </Box>
+        <Box sx={{ height: "250px", width: "400px" }}>
+          <img src={robotImg} alt="" height="100%" width="100%" />
+        </Box>
+      </Box>
+
+      <Divider sx={{ marginTop: "20px" }} />
+      <Box
+        display="flex"
+        sx={{ flexDirection: { xs: "column", md: "row" } }}
+        justifyContent="space-around"
+        alignItems="center"
+        marginTop="20px"
+      >
+        <Box
+          display="flex"
+          justifyContent="center"
+          sx={{
+            alignItems: { xs: "center", md: "start" },
+            order: { xs: -1, md: 1 },
+          }}
+          flexDirection="column"
+          width="50%"
+          gap={4}
+        >
+          <Typography
+            variant="h5"
+            sx={{ color: "red", textAlign: { xs: "center", md: "start" } }}
+          >
+            Make your proposal unforgettable with 'Propose on Wheels'
+          </Typography>
+          <Typography
+            variant="p"
+            sx={{ textAlign: { xs: "center", md: "start" } }}
+          >
+            Take your love to new heights with a romantic long drive proposal
+            that will leave you both breathless.
+          </Typography>
+          <Link to="/wheels">
+            <Button variant="contained" color="error">
+              Know More
+            </Button>
+          </Link>
+        </Box>
+        <Box sx={{ height: "250px", width: "400px" }} order={-1}>
+          <img src={wheelsImg} alt="" height="100%" width="100%" />
         </Box>
       </Box>
       {/* Newsletter  */}
